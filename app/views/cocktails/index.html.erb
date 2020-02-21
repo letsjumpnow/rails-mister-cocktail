@@ -2,5 +2,8 @@
 <ul>
   <% @cocktails.each do |cocktail| %>
     <li><%= cocktail.name %></li>
+    <%= cl_image_tag("loeoq2jn0t8jvh0mtyuz",
+      width: 400, height: 300, crop: :fill) %>
   <% end %>
 </ul>
+
