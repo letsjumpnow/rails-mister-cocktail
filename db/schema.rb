@@ -27,9 +27,8 @@ ActiveRecord::Schema.define(version: 2020_02_20_191315) do
     t.bigint "ingredient_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    # rails g model Dose description cocktail:references ingredient:references
-    t.index ["cocktail_id"], name: "index_doses_on_cocktail_id" # doses = intermediary btw cocktails + ingredients
-    t.index ["ingredient_id"], name: "index_doses_on_ingredient_id" # dose = many x many relationship
+    t.index ["cocktail_id"], name: "index_doses_on_cocktail_id"
+    t.index ["ingredient_id"], name: "index_doses_on_ingredient_id"
   end
 
   create_table "ingredients", force: :cascade do |t|
